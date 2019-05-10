@@ -1,3 +1,6 @@
+from audit import audit
+
+@audit
 def bubble_sort(array):
     """ bubble sort """
     for i in range(len(array)):
