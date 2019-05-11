@@ -1,3 +1,5 @@
+from audit import audit
+
 def quick_sort(array):
     """ quick sort """
     if len(array) > 1:
@@ -15,6 +17,11 @@ def quick_sort(array):
         quick_sort(larger)
         array[:] = smaller + [pivot_value] + larger
 
+
+@audit
+def quick_sort_wrapper(array):
+    """ avoid multiple audits because of recursive calling """
+    quick_sort(array)
 
 if __name__ == '__main__':
     import random

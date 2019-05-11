@@ -1,3 +1,5 @@
+from audit import audit
+
 def merge_sort(array):
     """ merge sort """
     if len(array) > 1:
@@ -39,6 +41,10 @@ def merge_sort(array):
 #                    raise Exception('cannot merge')
 #        
 
+@audit
+def merge_sort_wrapper(array):
+    """ avoid multiple measurements of audit due to recurrent calling """
+    merge_sort(array)
 
 if __name__ == '__main__':
     import random

@@ -2,6 +2,7 @@
 import time
 
 ENVIRONMENT_NAME = 'development'
+# ENVIRONMENT_NAME = 'production'
 
 def audit(func):
     """decorator to log information before and

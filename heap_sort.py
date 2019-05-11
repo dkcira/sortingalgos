@@ -1,5 +1,7 @@
 import heapq
+from audit import audit
 
+@audit
 def heap_sort(array):
     """ heap sort """
     heapq.heapify(array)

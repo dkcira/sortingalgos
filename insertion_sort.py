@@ -1,3 +1,6 @@
+from audit import audit
+
+@audit
 def insertion_sort(array):
     """ insertion sort """
     for i in range(len(array)):
