@@ -8,6 +8,14 @@ def bubble_sort(array):
             if array[j] > array[j+1]:
                 array[j], array[j+1] = array[j+1], array[j]
 
+@audit
+def bubble_sort2(array):
+    """ bubble sort """
+    for i in range(len(array)):
+        for j in range(len(array)-1 -i):
+            if array[i] < array[j]:
+                array[i],array[j] = array[j],array[i]
+
 
 if __name__ == '__main__':
     import random
